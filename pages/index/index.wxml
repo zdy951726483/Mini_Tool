@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='title'>外卖多少钱计算器</view>
+  <view style='text-align:right;'>
+  <button size="mini" bindtap='addNew'>新增</button>
+  </view>
+  <view wx:for="{{array}}" wx:key="index" wx:for-index="index" class='box' >
+    人{{index+1}}: <input type="digit" placeholder='输入这个人的外卖多少钱' data-id="{{index}}" bindinput='bindMoney' value="{{item.money}}"></input>
+    <button size="mini" bindtap='del' data-id="{{index}}" style='margin-left:20rpx;'>删除</button>
+    <view class='inline'>实际应付：{{item.reality}}</view>
+  </view>
+  <view class='box'>
+    餐盒费: <input type="digit" placeholder='餐盒费' bindinput='bindCH' value="{{canhe}}"></input>
+    <view class='litt'>
+    餐盒费说明: 平分
+    </view>
+  </view>
+  
+  <view class='box'>
+    配送费: <input type="digit" placeholder='配送费' bindinput='bindPS' value="{{peisong}}"></input>
+    <view class='litt'>
+    配送费说明: 平分
+    </view>
+  </view>
+  
+  <view class='box'>
+    满减: <input type="digit" placeholder='满减' bindinput='bindMJ' value="{{manjian}}"></input>
+    <view class='litt'>
+    满减说明:  按价钱权重
+    </view>
+  </view>
+  
+  <view class='box'>
+    红包: <input type="digit" placeholder='红包' bindinput='bindHB' value="{{hongbao}}"></input>
+    <view class='litt'>
+    红包说明:  按价钱权重
+    </view>
+  </view>
+  
+  <view class='submitBtn' bindtap='count'>
+    计算
+  </view>
+</view>
+<view style='text-align:center;line-height:90rpx;color:#ccc;'>
+结果取2位小数，结果仅供参考，不负任何责任
+</view>
+<view style='width:100%;height:90rpx;'></view>
