@@ -1,0 +1,10 @@
+<!--pages/surprise/surprise.wxml-->
+<view class="modal" wx:if="{{!show}}">
+	<view>(｡･ω･｡)</view>
+	<view>欢迎您进入开心快乐系统</view>
+	<view>请点击下方按钮体验快乐</view>
+	<view>╮(￣▽￣)╭</view>
+	<view class="btnBox">
+		<button class="mini-btn" type="primary" size="mini" bindtap="getHappy">点我</button>
+	</view>
+</view>

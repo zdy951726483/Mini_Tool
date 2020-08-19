@@ -1,7 +1,10 @@
 {
   "pages": [
+    "pages/surprise/surprise",
+    "pages/home/home",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/happy/happy"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,5 +12,30 @@
     "navigationBarTitleText": "饭费计算",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/img/icon1.png",
+        "selectedIconPath": "assets/img/icon1.png"
+      },
+      {
+        "pagePath": "pages/surprise/surprise",
+        "text": "嘻嘻",
+        "iconPath": "assets/img/icon2.png",
+        "selectedIconPath": "assets/img/icon2.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "工具",
+        "iconPath": "assets/img/icon3.png",
+        "selectedIconPath": "assets/img/icon3.png"
+      }
+    ],
+    "color": "#000",
+    "selectedColor": "#3178FD",
+    "backgroundColor": "#fdfdfd"
+  }
 }

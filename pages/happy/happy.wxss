@@ -1,0 +1,26 @@
+/* pages/happy/happy.wxss */
+@import '../surprise/surprise.wxss';
+
+.add {
+  /* position: absolute;00 */
+  /* left: 50%; */
+  flex: 1;
+}
+
+.txt {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.desc {
+  text-align: center;
+  color: #999999;
+  margin-top: 20px;
+}
+
+.loading {
+  background-color: #999999;
+  color: #003300;
+  border-color: #999999;
+}

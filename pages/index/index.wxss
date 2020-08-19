@@ -64,3 +64,9 @@ input{
 .inline{
   display: inline-block;
 }
+.contact{
+  background: #fff;
+  border: none;
+  display: inline;
+  color: #aaa;
+}

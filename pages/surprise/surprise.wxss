@@ -1,0 +1,75 @@
+/* pages/surprise/surprise.wxss */
+.modal {
+  position: fixed;
+  width: 80%;
+  height: 200px;
+  border: 1px solid #E19B10;
+  left: 50%;
+  top: 50%;
+  border-radius: 8px 8px 0 0 ;
+  transform: translate(-50%, -50%);
+  color: #E22D15;
+  line-height: 1.5;
+  padding: 15px;
+  /* text-indent: 2rem; */
+  text-align: center;
+  background-color: #FDE92F;
+}
+
+.mini-btn{
+  margin-right: 10rpx;
+}
+
+.btnBox {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+.happyCount {
+  text-align: center;
+  line-height: 2;
+  color: #6819EB;
+}
+
+.himg {
+  width: 50px;
+  height: 50px;
+}
+
+.txt {
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.txt text {
+  border: 1px dashed #E22D15;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.lit {
+  border: 1px dashed #FF3399;
+  color: #FF3399;
+  padding: 10px;
+  margin: 10px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.active {
+  border: 1px dashed #99CC33;
+  background-color: #99CC33;
+  color: #fff;
+}
+
+.flexBox {
+  display: grid;
+  grid-template-columns: repeat(3,33.33%);
+}

@@ -1,0 +1,28 @@
+<!--pages/home/home.wxml-->
+<view class="box" wx:if="{{show}}">
+	<image class="bg" src="../../assets/img/bg.png"></image>
+	<view class="lit" wx:for="{{arr}}" wx:for-index="ind" wx:for-item="data" wx:key="key" style="background-color: {{data.bg}};left:{{data.left}}px;bottom:{{data.bottom}}px;">
+	</view>
+</view>
+<view class="box" wx:if="{{show2}}">
+	<image class="bg" src="../../assets/img/bg.png"></image>
+	<view class="lit" wx:for="{{arr}}" wx:for-index="ind" wx:for-item="data" wx:key="key" style="background-color: {{data.bg}};left:{{data.left}}px;top:{{data.top}}px;">
+	</view>
+</view>
+<view class="btn" wx:if="{{!show && !show2}}">
+	<view class="flex white" bindtap="into" data-type="1"></view>
+	<view class="radius wr" bindtap="into" data-type="1">
+		<view></view>
+	</view>
+
+	<view class="flex black" bindtap="into" data-type="2"></view>
+	<view class="radius br" bindtap="into" data-type="2">
+		<view></view>
+	</view>
+</view>
+
+<view class="title" wx:if="{{!show && !show2}}">
+	<view class="desc">点击白色阴阳鱼进入下雪模式</view>
+	<view class="desc">点击黑色阴阳鱼进入随机发射球球模式</view>
+</view>
+<view class="bgBox"></view>

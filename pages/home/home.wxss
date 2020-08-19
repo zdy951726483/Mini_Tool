@@ -1,0 +1,115 @@
+/* pages/home/home.wxss */
+.btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: red;
+  text-align: center;
+  line-height: 100px;
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  display: flex;
+}
+
+.flex {
+  flex: 1;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.black {
+  background-color: black;
+}
+
+.box {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.lit {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+  /* background: #1E4EEB; */
+}
+
+.box .bg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.bgBox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  z-index: -1;
+}
+
+.radius {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.br {
+  background-color: #000;
+  overflow: hidden;
+  top: 0;
+  z-index: 30;
+}
+
+.wr {
+  background-color: #fff;
+  overflow: hidden;
+  bottom: 0;
+  z-index: 30;
+}
+
+.br view {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.wr view {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.title {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+}
+.desc {
+  color: #0E5DDF;
+  text-align: center;
+  line-height: 2;
+  background-color: rgba(0, 0, 0, 0);
+  
+}

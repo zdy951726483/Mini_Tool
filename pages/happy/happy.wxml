@@ -1,0 +1,22 @@
+<view class="happyCount">
+	<view class="txt"><text>↘ 我是 ↓ 快乐 ↙</text></view>
+	<image class="himg" src="../../assets/img/happy.png"></image>
+	<view class="txt">
+		<view class="add"></view>
+		<text>快乐指数 {{happyNum}}</text>
+		<view class="add">
+			<button class="mini-btn" type="primary" size="mini" bindtap="more" style="margin-top: 7px;">+1</button>
+		</view>
+	</view>
+	<view>Tips：快乐无上限，点的越快，就越快乐</view>
+</view>
+
+<view class="flexBox">
+	<view wx:for="{{awards}}" wx:for-index="ind" wx:for-item="item" wx:key="key" class="lit {{item.index === index ? 'active' : ''}} {{item.index === 4 && btn === false ? 'loading' : ''}}" bindtap="start" data-num="{{ind}}">
+		{{item.name}}
+	</view>
+</view>
+
+<view class="desc">
+该活动由赵太帅先生友情赞助,仅供可爱美丽迷人的欣宝宝使用，最终解释权归赵先生所属
+</view>
