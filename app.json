@@ -4,7 +4,8 @@
     "pages/home/home",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/happy/happy"
+    "pages/happy/happy",
+    "pages/ball/ball"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,7 +29,7 @@
         "selectedIconPath": "assets/img/icon2.png"
       },
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/ball/ball",
         "text": "工具",
         "iconPath": "assets/img/icon3.png",
         "selectedIconPath": "assets/img/icon3.png"

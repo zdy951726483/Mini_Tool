@@ -1,0 +1,2 @@
+<!--pages/ball/ball.wxml-->
+<text bindtap="goIn">进入嘻嘻哈哈模式</text>
