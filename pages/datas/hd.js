@@ -54,4 +54,32 @@ const wxData2 = [{
   name: '千元内眼影、水乳自选一',
   index: 8
 }];
-export { wxData1, wxData2 };
+const wxData3 = [{
+  name: '微信转账1000元',
+  index: 0
+}, {
+  name: '微信转账2000元',
+  index: 1
+}, {
+  name: '微信转账521元',
+  index: 2
+}, {
+  name: '微信转账3000元',
+  index: 3
+}, {
+  name: '开始',
+  index: 4
+}, {
+  name: '微信转账1314元',
+  index: 5
+}, {
+  name: '微信转账520元',
+  index: 6
+}, {
+  name: '微信转账52元',
+  index: 7
+}, {
+  name: '微信转账13.14元',
+  index: 8
+}];
+export { wxData1, wxData2, wxData3 };

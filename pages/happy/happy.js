@@ -1,5 +1,5 @@
 // pages/happy/happy.js
-import { wxData1, wxData2 } from '../datas/hd';
+import { wxData1, wxData2, wxData3 } from '../datas/hd';
 Page({
   /**
    * 页面的初始数据
@@ -35,7 +35,8 @@ Page({
       index: 8
     }],
     index: 0,
-    btn: true
+    btn: true,
+    happyImg: 'happy'
   },
 
   /**
@@ -148,12 +149,20 @@ Page({
     if (index > 10 && index <= 20) {
       let arr = wxData1;
       this.setData({
-        awards: arr
+        awards: arr,
+        happyImg: 'wz'
       })
-    } else if (index > 20) {
+    } else if (index > 20 && index <= 50) {
       let arr = wxData2;
       this.setData({
-        awards: arr
+        awards: arr,
+        happyImg: 'img_001'
+      })
+    } else if (index > 50) {
+      let arr = wxData3;
+      this.setData({
+        awards: arr,
+        happyImg: 'img_002'
       })
     }
     this.setData({

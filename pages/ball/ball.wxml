@@ -1,2 +1,3 @@
 <!--pages/ball/ball.wxml-->
-<text bindtap="goIn">进入嘻嘻哈哈模式</text>
+<view bindtap="goIn" class="btnList" style="background: {{bgcolor}};">进入嘻嘻哈哈模式</view>
+<view bindtap="goEat" class="btnList" style="background: {{bgcolor1}};">今天吃什么？</view>

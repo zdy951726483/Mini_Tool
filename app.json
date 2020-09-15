@@ -5,7 +5,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/happy/happy",
-    "pages/ball/ball"
+    "pages/ball/ball",
+    "pages/eatWhat/eat"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,19 +19,19 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
+        "text": "外卖计算器",
         "iconPath": "assets/img/icon1.png",
         "selectedIconPath": "assets/img/icon1.png"
       },
       {
         "pagePath": "pages/surprise/surprise",
-        "text": "嘻嘻",
+        "text": "快乐系统",
         "iconPath": "assets/img/icon2.png",
         "selectedIconPath": "assets/img/icon2.png"
       },
       {
         "pagePath": "pages/ball/ball",
-        "text": "工具",
+        "text": "多模式",
         "iconPath": "assets/img/icon3.png",
         "selectedIconPath": "assets/img/icon3.png"
       }

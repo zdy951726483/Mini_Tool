@@ -1,6 +1,6 @@
 <view class="happyCount">
 	<view class="txt"><text>↘ 我是 ↓ 快乐 ↙</text></view>
-	<image class="himg" src="../../assets/img/happy.png"></image>
+	<image class="himg" src="../../assets/img/{{happyImg}}.png"></image>
 	<view class="txt">
 		<view class="add"></view>
 		<text>快乐指数 {{happyNum}}</text>
@@ -11,12 +11,23 @@
 	<view>Tips：快乐无上限，点的越快，就越快乐</view>
 </view>
 
-<view class="flexBox">
-	<view wx:for="{{awards}}" wx:for-index="ind" wx:for-item="item" wx:key="key" class="lit {{item.index === index ? 'active' : ''}} {{item.index === 4 && btn === false ? 'loading' : ''}}" bindtap="start" data-num="{{ind}}">
-		{{item.name}}
+<view class="form">
+	<view class="bg">
+		<view></view>
+		<view></view>
+		<view></view>
+		<view></view>
 	</view>
-</view>
+	<view class="flexBox">
+		<view wx:for="{{awards}}" wx:for-index="ind" wx:for-item="item" wx:key="key" class="lit {{item.index === index ? 'active' : ''}} {{item.index === 4 && btn === false ? 'loading' : ''}}" bindtap="start" data-num="{{ind}}">
+			{{item.name}}
+		</view>
+	</view>
 
+</view>
+<view style='text-align:center;line-height:90rpx;color:#ccc;'>
+中奖凭中奖截图找客服领取!<button session-from='{"title":"您好，请问有什么需要帮助您的吗？"}' open-type="contact" bindcontact="handleContact" class='contact'>联系客服</button>
+</view>
 <view class="desc">
-该活动由赵太帅先生友情赞助,仅供可爱美丽迷人的欣宝宝使用，最终解释权归赵先生所属
+	该活动由赵太帅先生友情赞助,仅供可爱美丽迷人的欣宝宝使用，最终解释权归赵先生所属
 </view>

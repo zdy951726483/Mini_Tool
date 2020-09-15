@@ -54,13 +54,14 @@
   border: 1px dashed #FF3399;
   color: #FF3399;
   padding: 10px;
-  margin: 10px;
+  margin: 10px auto;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   text-align: center;
+  width: 80px;
 }
 
 .active {

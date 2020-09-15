@@ -1,0 +1,86 @@
+<!--pages/eatWhat/eat.wxml-->
+<view class="center">
+	<view class="eatText">今天吃</view>
+	<view class="container">
+		<view class="page-body">
+			<view class="page-section page-section-spacing swiper">
+				<swiper class="swiper1" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}">
+					<block wx:for="{{list}}" wx:key="*this">
+						<swiper-item>
+							<view class="swiper-item {{item}}">
+								{{item}}
+							</view>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+		</view>
+	</view>
+	<view class="eatText textR">吧</view>
+	<view class="imgBox">
+		<image src="../../assets/img/eat.png"></image>
+		<!-- <view class="tea">
+			<view>来杯奶茶？</view>
+		</view> -->
+	</view>
+	<view>
+		<button type="primary" bindtap="start" wx:if="{{!autoplay}}">开始</button>
+		<button type="warn" bindtap="stop" wx:if="{{autoplay}}">停止</button>
+	</view>
+	<view class="text">
+		<text>Tips：没有满意的食物？有其他想吃的？请自行添加备用食物</text>
+		<text bindtap="add" class="add">我要添加!!!</text>
+	</view>
+	<view style='text-align:center;line-height:20px;color:#ccc;'>
+		<view style="padding:10px 0;">
+			<text>如有新餐品请联系客服添加,让其他人也可以拥有您添加的餐品呢</text>
+		</view>
+		<button session-from='{"title":"您好，请问有什么需要帮助您的吗？"}' open-type="contact" bindcontact="handleContact" class='contact'>联系客服</button>
+	</view>
+</view>
+
+<view class="modal" wx:if="{{other}}">
+	<view class="bg">
+		<input class="weui-input" auto-focus placeholder="请输入想要吃的食物名称!!!" bindinput='bindFd' value="{{foodName}}" />
+		<view class="btnBox">
+			<button class="mini-btn" type="default" size="mini" bindtap="cancel">取消</button>
+			<button class="mini-btn" type="primary" size="mini" bindtap="ok">确定</button>
+		</view>
+	</view>
+</view>
+
+<view class="tea" wx:if="{{monster}}">
+	<view>
+		<view class="teaBody">
+			<view class="block block3 block4" style="color:#990000;">-1</view>
+		</view>
+		<view class="teaBody">
+			<view class="block block1">
+				<image src="../../assets/img/guai.png"></image>
+			</view>
+			<view class="block block2">
+				<image src="../../assets/img/naicha.png"></image>
+			</view>
+			<view class="block block3">
+				<image src="../../assets/img/wo.png"></image>
+			</view>
+		</view>
+		<view class="teaBody">
+			<view class="block block3" style="color:#990000;">HP: {{hp}}</view>
+		</view>
+		<view class="warin">不好！您遭到了奶茶怪兽的袭击!请购买奶茶！</view>
+		<view class="btnBox">
+			<button class="mini-btn" type="default" size="mini" bindtap="noBuy">我不想买</button>
+			<button class="mini-btn" type="primary" size="mini" bindtap="buy">我已购买</button>
+		</view>
+	</view>
+</view>
+
+<view class="toast" wx:if="{{result}}">
+	<view class="toastBody">
+		<view class="flexToast">
+			<image src="/assets/img/{{img}}.jpg"></image>
+		</view>
+		<text>{{text}}</text>
+	</view>
+</view>
