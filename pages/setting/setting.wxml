@@ -1,0 +1,6 @@
+<!--pages/setting/setting.wxml-->
+<view style="height: 20px;"></view>
+<view class="list" wx:for="{{list}}" wx:key="key" bindtap="goSet" data-item="{{item}}">
+  <text class="text">{{item.name}}</text>
+  <text class="right">></text>
+</view>

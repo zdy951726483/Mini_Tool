@@ -1,0 +1,84 @@
+/* pages/setData/setData.wxss */
+page {
+  padding: 10px;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+.icon {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 5px 0 5px 10px;
+  margin: 4px;
+  /* border: 1px solid #ccc; */
+  font-size: 16px;
+  border-radius: 4px;
+  background: #25C585;
+  color: #fff;
+  align-items: center;
+}
+
+.text {
+  flex: 1;
+}
+
+.del {
+  width: 20px;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.memo {
+  font-size: 24px;
+  color: #6B6F7D;
+  padding: 10px 0;
+}
+
+.btn {
+  text-align: center;
+}
+
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 300;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg .input {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.title {
+  
+font-size: 20px;
+font-family: PingFang SC;
+font-weight: bold;
+color: #333333;
+}
+
+.content {
+  padding: 20px 0;
+}
+
+.content input {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+.btnList button {
+  margin: 0 20px;
+}

@@ -1,0 +1,79 @@
+/* pages/scratch/scratch.wxss */
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  justify-content: space-between;
+  /* align-items: ; */
+  text-align: center;
+}
+.title {
+  padding: 20px;
+}
+.memo {
+  padding: 20px;
+}
+.content {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  
+  transition: all 2s;
+}
+.grid {
+  position: relative;
+  margin: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F5F9;
+  /* ef3429,f68f25,4ba846,0476c2,c077af,f8d29d,b4a87f,d0e4a8,4dc7ec */
+}
+.zg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #ccc;
+  color: #000;
+  font-size: 58px;
+  /* font-weight: bold; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .grid:nth-child(1) .zg {
+  background-color: #ef3429;
+}
+.grid:nth-child(2) .zg {
+  background-color: #f68f25;
+}
+.grid:nth-child(3) .zg {
+  background-color: #4ba846;
+}
+.grid:nth-child(4) .zg {
+  background-color: #0476c2;
+}
+.grid:nth-child(5) .zg {
+  background-color: #c077af;
+}
+.grid:nth-child(6) .zg {
+  background-color: #f8d29d;
+}
+.grid:nth-child(7) .zg {
+  background-color: #b4a87f;
+}
+.grid:nth-child(8) .zg {
+  background-color: #d0e4a8;
+}
+.grid:nth-child(9) .zg {
+  background-color: #4dc7ec;
+} */
+
+.xuanzhuan {
+  transform: rotate(360deg);
+}

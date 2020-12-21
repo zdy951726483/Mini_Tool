@@ -6,7 +6,10 @@
     "pages/logs/logs",
     "pages/happy/happy",
     "pages/ball/ball",
-    "pages/eatWhat/eat"
+    "pages/eatWhat/eat",
+    "pages/scratch/scratch",
+    "pages/setting/setting",
+    "pages/setData/setData"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -31,7 +34,7 @@
       },
       {
         "pagePath": "pages/ball/ball",
-        "text": "多模式",
+        "text": "个人中心",
         "iconPath": "assets/img/icon3.png",
         "selectedIconPath": "assets/img/icon3.png"
       }

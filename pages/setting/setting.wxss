@@ -1,0 +1,25 @@
+/* pages/setting/setting.wxss */
+.list {
+  /* text-align: center; */
+  height: 63px;
+  /* line-height: 126px; */
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  line-height: 34px;
+  border-bottom: 1px solid #E6E8F0;
+  margin: 0 auto;
+  width: 90%;
+  overflow: hidden;
+}
+
+.list .text {
+  flex: 1;
+}
+.list .right {
+  width: 45px;
+  font-size: 24px;
+}

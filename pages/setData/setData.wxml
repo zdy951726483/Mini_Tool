@@ -1,0 +1,26 @@
+<!--pages/setData/setData.wxml-->
+<view class="box">
+  <view class="icon" wx:for="{{list}}" wx:key="key" wx:for-index="ind">
+    <view class="text">{{item.name}}</view>
+    <view class="del" bindtap="delete" data-item="{{ind}}">X</view>
+  </view>
+</view>
+<view class="memo">
+  <text>总计：{{list.length}} 条</text>
+</view>
+<view class="btn">
+  <button class="mini-btn" type="primary" size="mini" bindtap="add">新增</button>
+</view>
+
+<view class="bg" wx:if="{{show}}">
+  <view class="input">
+    <view class="title">新增奖品</view>
+    <view class="content">
+      <input class="weui-input" auto-focus placeholder="请输入" bindinput='bindFd' value="{{foodName}}"/>
+    </view>
+    <view class="btnList">
+      <button class="mini-btn" type="default" size="mini" bindtap="cancelModal">取消</button>
+      <button class="mini-btn" type="primary" size="mini" bindtap="okModal">确定</button>
+    </view>
+  </view>
+</view>

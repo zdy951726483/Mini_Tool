@@ -1,3 +1,30 @@
 <!--pages/ball/ball.wxml-->
-<view bindtap="goIn" class="btnList" style="background: {{bgcolor}};">进入嘻嘻哈哈模式</view>
-<view bindtap="goEat" class="btnList" style="background: {{bgcolor1}};">今天吃什么？</view>
+<view class="container">
+	<view class="userinfo">
+		<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+		<block wx:else>
+			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+		</block>
+	</view>
+</view>
+<view class="list">
+	<view bindtap="goIn" class="btnList">
+		<view class="icon"><image src="../../assets/img/xiha.png" alt=""></image></view>
+		<view class="text">进入嘻嘻哈哈模式</view>
+		<view class="right"><image src="../../assets/img/into.png"></image></view>
+	</view>
+	<view bindtap="goEat" class="btnList">
+		<view class="icon"><image src="../../assets/img/eats.png" alt=""></image></view>
+		<view class="text">今天吃什么?</view>
+		<view class="right"><image src="../../assets/img/into.png"></image></view>
+	</view>
+	<view bindtap="goMy" class="btnList">
+		<view class="icon"><image src="../../assets/img/shezhi.png" alt=""></image></view>
+		<view class="text">设置</view>
+		<view class="right"><image src="../../assets/img/into.png"></image></view>
+	</view>
+</view>
+<view style="padding:20px;text-align:center;color:#666;">
+	免责声明：本系统最终解释权在开发者手中，仅供欣妹妹一人使用！！！其他人使用无效！！！其他人使用一切后果自负!!!
+</view>

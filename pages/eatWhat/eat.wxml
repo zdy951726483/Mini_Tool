@@ -8,7 +8,7 @@
 					<block wx:for="{{list}}" wx:key="*this">
 						<swiper-item>
 							<view class="swiper-item {{item}}">
-								{{item}}
+								{{item.name}}
 							</view>
 						</swiper-item>
 					</block>
@@ -29,7 +29,11 @@
 	</view>
 	<view class="text">
 		<text>Tips：没有满意的食物？有其他想吃的？请自行添加备用食物</text>
-		<text bindtap="add" class="add">我要添加!!!</text>
+		<view>
+			<text bindtap="add" class="add">我要添加!!!</text>
+			<!-- <text style="padding: 0 20px;">/</text> -->
+			<!-- <text bindtap="add" class="add">管理食物清单</text> -->
+		</view>
 	</view>
 	<view style='text-align:center;line-height:20px;color:#ccc;'>
 		<view style="padding:10px 0;">

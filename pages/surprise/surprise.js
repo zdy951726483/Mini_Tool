@@ -90,7 +90,9 @@ Page({
     let that = this;
     wx.showModal({
       title: '提示',
-      content: '您得到了快乐',
+      cancelText: '刮刮乐',
+      confirmText: '转盘抽奖',
+      content: '请选择快乐系统',
       success(res) {
         if (res.confirm) {
           console.log('用户点击确定')
@@ -99,6 +101,9 @@ Page({
           })
         } else if (res.cancel) {
           console.log('用户点击取消')
+          wx.navigateTo({
+            url: '../scratch/scratch',
+          })
         }
       }
     })

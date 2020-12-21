@@ -1,4 +1,5 @@
 // pages/eatWhat/eat.js
+import { wxData4 } from '../datas/hd';
 let timer = null;
 let outTimer = null;
 Page({
@@ -14,7 +15,7 @@ Page({
   },
 
   data: {
-    list: ['麻辣香锅', '肯德基', '麦当劳', '披萨', '米线', '小碗菜', '煎饼（手抓饼）', '炸鸡(韩式/叫了个鸡)', '鸡架', '烧烤', '火锅', '麻辣烫', '包子', '凉皮', '石锅拌饭', '饼+凉菜（猪头肉）', '烤鱼', '饺子', '方便面(酸辣粉)', '炒饼', '炒饭'],
+    list: [],
     indicatorDots: false,
     vertical: true,
     autoplay: false,
@@ -33,13 +34,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let arr = wx.getStorage({
-      key: 'foodList',
-    });
+    let arr = wx.getStorageSync('foodList');
     if (arr && arr.length > 0) {
-      let arr1 = [...this.data.list, ...arr];
       this.setData({
-        list: arr1
+        list: arr
+      });
+    } else {
+      this.setData({
+        list: wxData4
       });
     }
   },
@@ -161,23 +163,18 @@ Page({
   },
 
   ok() {
-    let foodList = wx.getStorage({
-      key: 'foodList'
+    let arr = this.data.list;
+    arr.push({
+      name: this.data.foodName,
+      index: this.data.list.length
     });
-    let arr = [];
-    if (foodList && foodList.length > 0) {
-      arr = foodList;
-    }
-    arr.push(this.data.foodName);
-    let arr1 = [...this.data.list, ...arr]
     wx.setStorage({
       key: "foodList",
       data: arr
     });
-
     this.setData({
       other: false,
-      list: arr1
+      list: arr
     });
   },
 
@@ -212,7 +209,7 @@ Page({
     this.setData({
       monster: false
     });
-    this.toast('img_02','恭喜，您贿赂了怪兽！活了下来！',2000);
+    this.toast('img_02', '恭喜，您贿赂了怪兽！活了下来！', 2000);
   },
 
   noBuy() {
@@ -220,7 +217,7 @@ Page({
       monster: false,
       autoplay: false
     });
-    this.toast('img_01','奶茶怪兽生气了！您被奶茶怪兽打屎了',2000);
+    this.toast('img_01', '奶茶怪兽生气了！您被奶茶怪兽打屎了', 2000);
   },
 
   toast(img, text, time) {

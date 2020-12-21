@@ -1,0 +1,16 @@
+<view class="main">
+	<view class="title">请选择一个{{title}}</view>
+
+	<view class="content {{roate ? 'xuanzhuan' : ''}}">
+		<view class="grid" wx:for="{{list}}" wx:for-index="index" wx:for-item="item" wx:key="key" bindtap="open" data-item="{{index}}">
+			{{item.text}}
+			<view class="zg" wx:if="{{item.show}}" style="background-color: {{item.color}}">{{index + 1}}</view>
+		</view>
+	</view>
+	<view class="again">
+		<button class="mini-btn" type="primary" size="mini" bindtap="disorganize" style="margin-right:10px;">洗牌</button>
+		<button class="mini-btn" type="warn" size="mini" bindtap="punish" wx:if="{{pattern === '1'}}">惩罚业哥哥模式</button>
+		<button class="mini-btn" type="warn" size="mini" bindtap="give" wx:if="{{pattern === '2'}}">奖励欣妹妹模式</button>
+	</view>
+	<view class="memo">此系统解释权均归赵帅哥先生所有</view>
+</view>
